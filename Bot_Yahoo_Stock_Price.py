@@ -9,12 +9,12 @@ def yfPrice(stock):
     
     today = datetime.now()
 
-    bfri = yf.Ticker(stock)
-    MarketPrice = bfri.info["regularMarketPrice"]
-    PreMarketPrice = bfri.info["preMarketPrice"]
+    Stock = yf.Ticker(stock)
+    MarketPrice = Stock.info["regularMarketPrice"]
+    PreMarketPrice = Stock.info["preMarketPrice"]
 
-    PrecoLive = str('\n {} \n Pre market price: {} \n Market price: {} \n  \n \n').format(today, PreMarketPrice, MarketPrice)
-    print(PrecoLive)
+    LivePrice = str('\n {} \n Pre market price: {} \n Market price: {} \n  \n \n').format(today, PreMarketPrice, MarketPrice)
+    print(LivePrice)
 
     time.sleep(5)
 
